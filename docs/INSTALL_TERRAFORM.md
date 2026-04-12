@@ -1,4 +1,4 @@
-# 🧭 Manual de Instalación de Terraform  
+mkdir "$env:USERPROFILE\.ssh"# 🧭 Manual de Instalación de Terraform  
 **Curso:** BluePrints / ARSW  
 **Objetivo:** Configurar el entorno local para ejecutar y probar Terraform con Azure.
 
@@ -161,3 +161,2567 @@ winget uninstall HashiCorp.Terraform
 - [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
 - [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩 6. Inicializar un proyecto Terraform
+
+Dentro de la carpeta `infra/`:
+```bash
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -out plan.tfplan
+terraform apply "plan.tfplan"
+```
+
+---
+
+## 🧼 7. Desinstalar
+
+**macOS:**  
+```bash
+brew uninstall terraform
+```
+
+**Linux:**  
+```bash
+sudo apt-get remove terraform -y
+```
+
+**Windows:**  
+```powershell
+winget uninstall HashiCorp.Terraform
+```
+
+---
+
+## 🧠 Errores comunes
+
+| Error | Causa | Solución |
+|-------|--------|----------|
+| `terraform: command not found` | PATH no configurado | Agregar binario al PATH o reinstalar |
+| `az login` falla | CLI desactualizado | Ejecuta `az upgrade` |
+| `Insufficient privileges` | Sin permisos sobre la suscripción | Solicita rol “Contributor” |
+| `Error acquiring state lock` | Backend mal configurado | Verifica contenedor de Azure Storage (tfstate) |
+
+---
+
+## 📘 Referencias oficiales
+- [Terraform CLI Installation Guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Azure Provider Docs](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+- [Azure CLI Docs](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+
+---
+
+## 🪟 4. Instalación en Windows
+
+### Opción 1 — Con Winget (Windows 10/11)
+```powershell
+winget install HashiCorp.Terraform
+```
+
+### Opción 2 — Manual (ZIP)
+1. Descarga el ZIP desde [Terraform Downloads](https://developer.hashicorp.com/terraform/downloads).  
+2. Extrae el contenido en `C:\terraform`.  
+3. Agrega esa ruta al **PATH** del sistema.  
+4. Abre PowerShell y valida:
+```powershell
+terraform -version
+```
+
+> ⚠️ Si el comando no se reconoce, revisa el PATH o reinicia tu sesión.
+
+---
+
+## ☁️ 5. Autenticación con Azure
+
+Conéctate a Azure:
+```bash
+az login
+```
+Verifica la suscripción activa:
+```bash
+az account show
+```
+Selecciona la correcta (si tienes varias):
+```bash
+az account set --subscription "<SUBSCRIPTION_ID>"
+```
+
+---
+
+## 🧩

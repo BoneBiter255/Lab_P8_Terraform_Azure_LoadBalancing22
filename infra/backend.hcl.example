@@ -1,4 +1,5 @@
 resource_group_name  = "rg-tfstate-lab8"
 storage_account_name = "sttfstate<UNICO>"
 container_name       = "tfstate"
-key                  = "lab8/terraform.tfstate"
+key                  = "terraform.tfstate"
+access_key           = "<obtener-con: az storage account keys list -g rg-tfstate-lab8 -n sttfstate<UNICO> --query [0].value -o tsv>"
